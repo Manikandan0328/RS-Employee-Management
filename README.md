@@ -36,19 +36,20 @@ This system allows users to **add, edit, update, delete, and manage employee rec
    cd RS-Employee-Management
 
 2. **Install dependencies for both backend and frontend**
-#### Install backend dependencies
+##### Install backend dependencies
     cd backend && npm install
 
-#### Install frontend dependencies
+##### Install frontend dependencies
 
     cd ../frontend && npm install
 
 3. **Setup environment variables**
 Create a .env file inside the backend directory and add:
+
    PORT=5000
    MONGO_URI=mongodb://127.0.0.1:27017/rs_employee
 
-4. **Run the development servers**
+5. **Run the development servers**
 
 #### Start backend server (from backend directory)
     cd backend 
@@ -59,8 +60,9 @@ Create a .env file inside the backend directory and add:
     npm start
 
 ## Login Credentials
-Email: admin123@gmail.com
-Password: admin123
+
+    Email: admin123@gmail.com
+    Password: admin123
 
 ## Additional Dependencies
 
