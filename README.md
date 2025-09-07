@@ -75,6 +75,8 @@ If you face errors while running the project, make sure to install these extra p
 
 These are used for routing, calendar inputs, icons, and toast notifications.
 
+##Screenshots
+<img src="Screenshots/Login.png" width="300" alt="Example Image">
 
    
    
