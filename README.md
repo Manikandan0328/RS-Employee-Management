@@ -36,10 +36,10 @@ This system allows users to **add, edit, update, delete, and manage employee rec
    cd RS-Employee-Management
 
 2. **Install dependencies for both backend and frontend**
-##### Install backend dependencies
+###### Install backend dependencies
     cd backend && npm install
 
-##### Install frontend dependencies
+###### Install frontend dependencies
 
     cd ../frontend && npm install
 
@@ -51,11 +51,11 @@ Create a .env file inside the backend directory and add:
 
 5. **Run the development servers**
 
-#### Start backend server (from backend directory)
+###### Start backend server (from backend directory)
     cd backend 
     npm run dev
 
-#### Start frontend server (from frontend directory in new terminal)
+###### Start frontend server (from frontend directory in new terminal)
     cd frontend
     npm start
 
