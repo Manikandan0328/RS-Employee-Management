@@ -76,20 +76,21 @@ If you face errors while running the project, make sure to install these extra p
 These are used for routing, calendar inputs, icons, and toast notifications.
 
 ##Screenshots
-<br/>
+<br/> <br/>
 <img src="Screenshots/Login.png" width="800" alt="Example Image">
-<br/>
-<br/>
-
-<br/>
-
-<br/>
-
-<br/>
-
-<br/>
-
-<br/>
+<br/><br/>
+<img src="Screenshots/Home.png" width="800" alt="Example Image">
+<br/><br/>
+<img src="Screenshots/Emp-Form.png" width="800" alt="Example Image">
+<br/><br/>
+<img src="Screenshots/Add-Emp.png" width="800" alt="Example Image">
+<br/><br/>
+<img src="Screenshots/Edit.png" width="800" alt="Example Image">
+<br/><br/>
+<img src="Screenshots/Emp_Profile.png" width="800" alt="Example Image">
+<br/><br/>
+<img src="Screenshots/Show-Emp.png" width="800" alt="Example Image">
+<br/><br/>
 
    
    
