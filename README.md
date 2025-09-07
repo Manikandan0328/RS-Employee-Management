@@ -45,9 +45,8 @@ This system allows users to **add, edit, update, delete, and manage employee rec
 
 3. **Setup environment variables**
 Create a .env file inside the backend directory and add:
-
-    PORT=5000
-    MONGO_URI=mongodb://127.0.0.1:27017/rs_employee
+   PORT=5000
+   MONGO_URI=mongodb://127.0.0.1:27017/rs_employee
 
 4. **Run the development servers**
 
