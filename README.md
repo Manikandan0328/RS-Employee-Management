@@ -73,7 +73,7 @@ If you face errors while running the project, make sure to install these extra p
     react-icons 
     react-hot-toast
 
-These are used for routing, calendar inputs, icons, and toast notifications.
+These are used for routing, calendar inputs, icons, and toast notifications. still getting error make uploades folder in backend directory.
 
 ##Screenshots
 <br/> <br/>
