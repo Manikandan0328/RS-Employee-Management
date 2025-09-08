@@ -6,6 +6,8 @@ import { FaCamera } from "react-icons/fa";
 import { MdEdit, MdOutlineDelete, MdVisibility } from "react-icons/md";
 import { FaUserCircle } from "react-icons/fa";
 import CustomButton from "../components/CustomButton";
+import toast, { Toaster } from "react-hot-toast";
+
 
 const API_URL = "http://localhost:5000/api/employees";
 
@@ -54,9 +56,10 @@ const Employee = () => {
       "status",
       "type",
     ];
+     
     for (let field of requiredFields) {
       if (!form[field] || form[field].trim() === "") {
-        alert(`${field.charAt(0).toUpperCase() + field.slice(1)} is required!`);
+        toast.error(`${field.charAt(0).toUpperCase() + field.slice(1)} is required!`);
         return false;
       }
     }
@@ -524,6 +527,7 @@ const Employee = () => {
           </div>
         </div>
       )}
+      <Toaster position="bottom-center" />
     </div>
   );
 };
