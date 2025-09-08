@@ -82,10 +82,10 @@ const Employee = () => {
       setLoading(false);
       setTimeout(() => {
         setSelectedEmployee(data);
-        setMode("view");
+        setMode("list");
         setSuccessMsg("");
         fetchEmployees();
-      }, 1000);
+      }, 10);
     } catch (err) {
       console.error(err);
       setLoading(false);
@@ -102,7 +102,7 @@ const Employee = () => {
       });
       if (form.imageFile) formData.append("image", form.imageFile);
 
-      const res = await fetch(`${API_URL}/${selectedEmployee._id}`, {
+      const res = await fetch(`${API_URL}/${selectedEmployee.id}`, {
         method: "PUT",
         body: formData,
       });
@@ -114,7 +114,7 @@ const Employee = () => {
         setMode("view");
         setSuccessMsg("");
         fetchEmployees();
-      }, 1000);
+      }, 10);
     } catch (err) {
       console.error(err);
       setLoading(false);
@@ -171,7 +171,7 @@ const Employee = () => {
               </div>
               <CustomButton onClick={() => setMode("add")}>
                 <IoMdAdd className="mr-2 text-4xl" />{" "}
-                <span className="text-lg">Add Employee</span>
+                <span className="text-lg">Add New Employee</span>
               </CustomButton>
             </div>
           </div>
@@ -192,7 +192,7 @@ const Employee = () => {
             <tbody>
               {filteredEmployees.length > 0 ? (
                 filteredEmployees.map(emp => (
-                  <tr key={emp._id} className="border-b hover:bg-gray-50">
+                  <tr key={emp.id} className="border-b hover:bg-gray-50">
                     <td className="py-2 px-4 flex items-center gap-2">
                       {emp.image ? (
                         <img
@@ -235,7 +235,7 @@ const Employee = () => {
                       </button>
                       <button
                         onClick={() =>
-                          setDeletePopup({ open: true, id: emp._id })
+                          setDeletePopup({ open: true, id: emp.id })
                         }
                         className="text-red-500 hover:text-red-700"
                       >
@@ -328,6 +328,7 @@ const Employee = () => {
                       {selectedEmployee.project}
                     </p>
                   </div>
+                 
                   <div>
                     <p className="text-sm text-gray-600">Status</p>
                     <p className="text-lg font-medium">
@@ -337,7 +338,9 @@ const Employee = () => {
                 </div>
 
                 {/* Row 4 - Type */}
+                
                 <div className="grid grid-cols-2 gap-4 p-4">
+                    
                   <div>
                     <p className="text-sm text-gray-600">Type</p>
                     <p className="text-lg font-medium">
@@ -425,6 +428,7 @@ const Employee = () => {
                   field: "project",
                   placeholder: "Enter project name",
                 },
+                
               ].map(({ label, field, placeholder }) => (
                 <div key={field}>
                   <label className="block text-lg font-bold mb-1">
@@ -484,18 +488,18 @@ const Employee = () => {
             )}
             {mode === "edit" && (
               <>
-                <button
+                <CustomButton 
                   onClick={resetForm}
-                  className="bg-red-500 text-white px-4 py-2 rounded hover:bg-red-600"
+                 variant="danger"
                 >
                   Cancel
-                </button>
-                <button
+                </CustomButton>
+                <CustomButton
                   onClick={handleUpdateEmployee}
-                  className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600"
+                  variant="primary"
                 >
                   Update
-                </button>
+                </CustomButton>
               </>
             )}
           </div>
@@ -511,18 +515,18 @@ const Employee = () => {
               Are you sure you want to delete this employee?
             </h3>
             <div className="flex justify-center gap-4">
-              <button
+              <CustomButton
                 onClick={() => setDeletePopup({ open: false, id: null })}
-                className="bg-red-500 text-white px-6 py-2 rounded hover:bg-red-600"
+                variant="primary"
               >
                 Cancel
-              </button>
-              <button
+              </CustomButton>
+              <CustomButton
                 onClick={handleDeleteEmployee}
-                className="bg-blue-500 text-white px-6 py-2 rounded hover:bg-blue-600"
+                variant="danger" className="px-6"
               >
                 Yes
-              </button>
+              </CustomButton>
             </div>
           </div>
         </div>
