@@ -50,7 +50,6 @@ Create database in MySQL
    ```
    CREATE DATABASE rs_tech;
 
-
 4. **Run the development servers**
 
 ###### Start backend server (from backend directory)
