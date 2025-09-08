@@ -1,14 +1,16 @@
-const mongoose = require("mongoose");
+const { DataTypes } = require("sequelize");
+const sequelize = require("../config/db");
 
-const employeeSchema = new mongoose.Schema({
-  name: { type: String, required: true },
-  employeeId: { type: String, required: true, unique: true },
-  department: { type: String, required: true },
-  designation: { type: String, required: true },
-  project: { type: String, required: true },
-  status: { type: String, required: true },
-  type: { type: String, required: true },
-  image: { type: String },
+const Employee = sequelize.define("Employee", {
+  id: { type: DataTypes.INTEGER, autoIncrement: true, primaryKey: true },
+  name: { type: DataTypes.STRING, allowNull: false },
+  employeeId: { type: DataTypes.STRING, allowNull: false, unique: true },
+  department: { type: DataTypes.STRING, allowNull: false },
+  designation: { type: DataTypes.STRING, allowNull: false },
+  project: { type: DataTypes.STRING, allowNull: false },
+  status: { type: DataTypes.STRING, allowNull: false },
+  type: { type: DataTypes.STRING, allowNull: false },
+  image: { type: DataTypes.STRING },
 });
 
-module.exports = mongoose.model("Employee", employeeSchema);
+module.exports = Employee;
