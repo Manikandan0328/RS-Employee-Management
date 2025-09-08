@@ -1,7 +1,7 @@
 # Employee Management System (RS TECH)
 
-A simple and responsive **Employee Management System** built with the **MERN stack** (MongoDB, Express.js, React.js, Node.js).  
-This system allows users to **add, edit, update, delete, and manage employee records** with a clean UI and modern design.  
+A simple and responsive Employee Management System built with the MySQL, Express.js, React.js, and Node.js stack.
+This system allows users to add, edit, update, delete, and manage employee records with a clean UI and modern design, while storing data securely in a MySQL relational database.
 
 ---
 
@@ -17,14 +17,16 @@ This system allows users to **add, edit, update, delete, and manage employee rec
 - Express.js  
 
 **Database**  
-- MongoDB (Mongoose)  
+- MySQL (sequelize ) 
 
 **Other Libraries**  
 - `react-icons` → Icons  
 - `react-calendar` → Calendar inputs  
 - `react-hot-toast` → Notifications  
 - `cors` → Cross-origin requests  
-- `body-parser` → Parsing requests  
+- `body-parser` → Parsing requests
+- `mysql2` → Node.js and MySQL databases
+- `sequelize ` → Node.js ORM
 
 ---
 
@@ -43,13 +45,13 @@ This system allows users to **add, edit, update, delete, and manage employee rec
 
     cd ../frontend && npm install
 
-3. **Setup environment variables**
-Create a .env file inside the backend directory and add:
+3. **Run MySQL**
+Create database in MySQL
    ```
-   PORT=5000;
-   MONGO_URI=mongodb://127.0.0.1:27017/rs_employee
+   CREATE DATABASE rs_tech;
 
-5. **Run the development servers**
+
+4. **Run the development servers**
 
 ###### Start backend server (from backend directory)
     cd backend 
@@ -72,6 +74,7 @@ If you face errors while running the project, make sure to install these extra p
     react-calendar 
     react-icons 
     react-hot-toast
+    tailwindcss@3
 
 These are used for routing, calendar inputs, icons, and toast notifications. still getting error make uploades folder in backend directory.
 
